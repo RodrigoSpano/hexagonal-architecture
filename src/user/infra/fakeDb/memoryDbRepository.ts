@@ -13,4 +13,8 @@ export class MemoryDbRepository implements IUserRepository {
     if (user) return user;
     throw new Error("User not found.");
   }
+
+  public async getAll(): Promise<User[]> {
+    return DB;
+  }
 }
